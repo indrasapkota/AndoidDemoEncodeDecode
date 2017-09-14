@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.voicebox.androiddevlopment.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!--Content Parent Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/fab_margin">
+
+
+        <!--Request Body-->
+        <LinearLayout
+            android:id="@+id/layoutInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Message layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="70"
+                    android:gravity="center_vertical"
+                    android:text="@string/txtMessage" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="30"
+                    app:errorEnabled="true">
+
+                    <EditText
+                        android:id="@+id/inputMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/strHintMessage"
+                        android:inputType="textEmailAddress"
+                        android:lines="1" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <!--Keyword layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="70"
+                    android:text="@string/txtKeyword" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="30"
+                    app:errorEnabled="true">
+
+                    <EditText
+                        android:id="@+id/keywordEntry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/strHintKeyword" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <!--Encode / Decode layout-->
+            <RadioGroup
+                android:id="@+id/encodeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:orientation="horizontal"
+                android:padding="@dimen/fab_margin"
+                android:weightSum="100">
+
+                <RadioButton
+                    android:id="@+id/encodeOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:checked="true"
+                    android:text="@string/strEncode" />
+
+                <RadioButton
+                    android:id="@+id/decodeOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="@string/strDecode" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--Layout Calculate-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutResult"
+            android:layout_below="@id/layoutInput">
+
+            <Button
+                android:id="@+id/buttonCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary"
+                android:text="@string/strRun"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <!--Layout Result-->
+        <LinearLayout
+            android:id="@id/layoutResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="@dimen/fab_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/fab_margin"
+                android:text="@string/strResults"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <!--Message layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="65"
+                    android:gravity="center_vertical"
+                    android:text="@string/txtResultMessage" />
+
+                <TextView
+                    android:id="@+id/resultMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="35"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

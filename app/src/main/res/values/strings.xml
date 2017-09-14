@@ -1,0 +1,20 @@
+<resources>
+    <!--Basic Strings-->
+    <string name="app_name">SPD Key</string>
+
+    <!--String Used in Content_main Layout-->
+    <string name="txtMessage">Message</string>
+    <string name="strHintMessage">Enter message</string>
+    <string name="strEncode">Encode</string>
+    <string name="strDecode">Decode</string>
+    <string name="strRun">Run</string>
+    <string name="strResults">Results</string>
+    <string name="txtResultMessage">ResultMessage</string>
+    <string name="txtKeyword">Keyword</string>
+    <string name="strHintKeyword">Enter Keyword</string>
+
+    <!--Error Message-->
+    <string name="strErrorInputMessage">Please enter message!</string>
+    <string name="strErrorInputKeyword">Please enter keyword!</string>
+
+</resources>
